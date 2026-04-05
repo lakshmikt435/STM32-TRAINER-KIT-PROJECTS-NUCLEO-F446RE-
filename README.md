@@ -7,10 +7,15 @@ Key Hardware Components
 The kit integrates several essential modules for embedded developmentsuch as:
 
 Microcontroller: STM32 Nucleo-F446RE (ARM Cortex-M core).
+
 Visual Output: OLED Display, NeoPixel RGB Ring, and a standard LED.
+
 Sensors: Ultrasonic Sensor, LDR (Light Dependent Resistor), DHT11 (Temperature & Humidity), and an IR receiver.
+
 Actuators: DC Fan, SG90 Servo Motor, and a Piezo Buzzer.
+
 Inputs: Potentiometer (Trimpot), Push Button, and a Slide Switch.
+
 Connectivity: Grove-compatible ports for external I2C and Serial sensors, plus breadboard for custom circuitry.
 
 Software used : STM32Cube IDE

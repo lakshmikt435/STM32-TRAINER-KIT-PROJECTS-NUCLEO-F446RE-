@@ -1,0 +1,7 @@
+This project implements an automatic fan control system using an STM32-based trainer kit. The system monitors ambient temperature through the DHT11 sensor and turns on/off the fan accordingly. It helps in energy efficiency, automation, and thermal management without human intervention.
+
+🎯 Objectives
+-To measure temperature using a DHT11 Sensor
+-To process sensor data using STM32 microcontroller
+-To control fan based on temperature thresholds
+-To demonstrate real-time embedded system control

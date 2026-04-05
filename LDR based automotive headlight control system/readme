@@ -1,4 +1,4 @@
-This project implements an automatic headlight control system using an STM32-based trainer kit. It uses an LDR (Light Dependent Resistor) to detect ambient light conditions and automatically switches the LED (headlight) ON or OFF. The system improves driver convenience, energy efficiency, and safety by eliminating the need for manual control.
+This project implements an automatic headlight control system using an STM32-based trainer kit. It uses an LDR (Light Dependent Resistor) to detect ambient light conditions and automatically switches the LED (headlight) ON or OFF. The threshold value of LDR for turning on the LED is set to 2000. The system improves driver convenience, energy efficiency, and safety by eliminating the need for manual control.
 
 🎯 Objectives
 -To detect ambient light intensity using an LDR

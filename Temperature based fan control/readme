@@ -1,4 +1,4 @@
-This project implements an automatic fan control system using an STM32-based trainer kit. The system monitors ambient temperature through the DHT11 sensor and turns on/off the fan accordingly. It helps in energy efficiency, automation, and thermal management without human intervention.
+This project implements an automatic fan control system using the STM32 trainer kit. The system monitors ambient temperature through the DHT11 sensor and sends the data to the central controller. Based on the temperature readings , the onboard fan is turned on/off accordingly. It helps in energy efficiency, automation, and thermal management without human intervention.
 
 🎯 Objectives
 -To measure temperature using a DHT11 Sensor

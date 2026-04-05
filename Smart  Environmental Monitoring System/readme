@@ -1,0 +1,7 @@
+This project implements a smart environment monitoring system using an STM32-based trainer kit. It uses sensors to measure temperature, humidity, and light intensity in real-time. The STM32 processes the sensor data and categorizes environmental conditions. This system helps in enabling smart automation in homes and industries.
+
+🎯 Objectives
+To measure temperature and humidity using DHT11 sensor
+To detect ambient light intensity using an LDR
+To display the results on an OLED display for real-time visualization 
+To develop a basic real-time environmental monitoring system

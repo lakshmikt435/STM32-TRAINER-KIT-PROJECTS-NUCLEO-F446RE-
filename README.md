@@ -4,7 +4,7 @@ This repository contains code and documentation for projects developed using the
 
 --Key Hardware Components
 
-The kit integrates several essential modules for embedded developmentsuch as:
+The kit integrates several essential modules for embedded development such as:
 
 Microcontroller: STM32 Nucleo-F446RE (ARM Cortex-M core).
 

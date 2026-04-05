@@ -1,0 +1,7 @@
+This project implements a smart contactless parking assistance system using an STM32-based trainer kit. It uses an LDR (Light Dependent Resistor) to detect the presence of a vehicle and provides feedback through a buzzer, helping drivers park safely without physical contact. The system is simple, low-cost, and effective for short-range detection.
+
+🎯 Objectives
+- To detect vehicle presence using light intensity variation (LDR)
+- To process sensor data using STM32 microcontroller
+- To alert the driver using a buzzer
+- To build a low-cost contactless parking aid system

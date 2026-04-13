@@ -1,4 +1,4 @@
-This project implements a smart contactless parking assistance system using an STM32-based trainer kit. It uses an LDR (Light Dependent Resistor) to detect the presence of any obstacles during parking of the vehicle and provides feedback through a buzzer, helping drivers park safely without physical contact. Four conditions were implemented for controlling the frequency of buzzer beeps - 
+This project implements a smart contactless parking assistance system using an STM32-based trainer kit. It uses an Ultrasonic sensor to detect the presence of any obstacles during parking of the vehicle and provides feedback through a buzzer, helping drivers park safely without physical contact. Four conditions were implemented for controlling the frequency of buzzer beeps - 
 1-distence less tha 5 cm
 2-distance between 5 and 20 cm
 3-distance between 20 to 30cm

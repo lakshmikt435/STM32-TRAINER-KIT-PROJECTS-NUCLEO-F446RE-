@@ -7,7 +7,7 @@ The system is simple, low-cost, and effective for short-range detection.
 
 
 🎯 Objectives
-- To detect vehicle presence using light intensity variation (LDR)
+- To detect vehicle presence using ultrasonic sensor
 - To process sensor data using STM32 microcontroller
 - To alert the driver using a buzzer
 - To build a low-cost contactless parking aid system

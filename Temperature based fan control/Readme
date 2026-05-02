@@ -1,0 +1,70 @@
+🌡️ Automatic Fan Control using STM32 (DHT11)
+📌 Overview
+
+This project implements an Automatic Fan Control System using an STM32 microcontroller and a DHT11 temperature sensor. The system continuously monitors ambient temperature and automatically switches a fan ON or OFF based on predefined threshold values.
+
+🎯 Features
+Real-time temperature monitoring
+Digital sensor interfacing (DHT11)
+Automatic fan control
+Simple embedded control logic
+Energy-efficient operation
+🧠 Working Principle
+
+The DHT11 sensor measures ambient temperature and sends digital data to the STM32. The microcontroller processes this data and compares it with a threshold value. If the temperature exceeds the set limit, the fan is turned ON; otherwise, it remains OFF.
+
+🔧 Hardware Used
+STM32 (e.g., STM32F4 series / Trainer Kit)
+DHT11 Temperature Sensor
+Fan / LED (as output indicator)
+Connecting wires
+🔌 Pin Configuration
+Component	Pin
+DHT11 Data Pin	PA9
+Fan Control	PA10
+⚙️ Software Configuration
+IDE: STM32CubeIDE
+Language: C (HAL Drivers)
+Timing: DWT-based microsecond delay
+Communication: Single-wire digital protocol
+📊 Output
+If temperature > 30°C → Fan ON
+If temperature ≤ 30°C → Fan OFF
+🚀 How It Works
+STM32 sends a start signal to DHT11
+Sensor responds with temperature data
+Data is read bit-by-bit using precise timing
+Temperature value is extracted
+Fan is controlled based on threshold
+System updates every 2 seconds
+▶️ How to Run
+Open project in STM32CubeIDE
+Build the project
+Connect STM32 via ST-Link/USB
+Flash the code
+Observe fan operation based on temperature
+⚠️ Notes
+Use a 4.7k–10kΩ pull-up resistor on DHT11 data pin
+Ensure DWT timer is enabled for accurate delays
+Avoid long wires to prevent unstable readings
+Valid temperature range check is included (30–60°C)
+📁 Project Structure
+Core/
+ ├── Src/
+ │    └── main.c
+ ├── Inc/
+Drivers/
+project.ioc
+🧠 Concepts Demonstrated
+Digital sensor interfacing (DHT11)
+GPIO control
+Timing-critical communication
+Real-time embedded system design
+🌍 Applications
+Smart home automation
+Temperature-based cooling systems
+Server room monitoring
+Industrial thermal control
+🎯 Conclusion
+
+This project demonstrates a simple yet effective real-time embedded automation system where sensor data is used to control hardware, improving energy efficiency and reducing manual intervention.

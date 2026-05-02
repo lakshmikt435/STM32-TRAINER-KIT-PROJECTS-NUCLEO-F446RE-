@@ -1,0 +1,77 @@
+🚗 Smart Parking Assistance System using STM32 (Ultrasonic + Buzzer)
+📌 Overview
+
+This project implements a Smart Contactless Parking Assistance System using an STM32 microcontroller and an ultrasonic sensor. The system detects obstacles in real time and provides feedback through a buzzer with varying beep patterns based on distance, helping drivers park safely without physical contact.
+
+🎯 Features
+Real-time distance measurement
+Ultrasonic sensor interfacing
+Distance-based buzzer alert system
+Dynamic beep frequency control
+Low-cost and efficient design
+🧠 Working Principle
+
+The ultrasonic sensor emits sound waves and measures the time taken for the echo to return after hitting an obstacle. The STM32 calculates the distance based on this time. Depending on how close the object is, the buzzer produces different alert patterns, indicating proximity to the driver.
+
+🔧 Hardware Used
+STM32 (e.g., STM32F4 series / Trainer Kit)
+Ultrasonic Sensor (HC-SR04)
+Buzzer
+Connecting wires
+🔌 Pin Configuration
+Component	Pin
+Trigger (TRIG)	PB5
+Echo (ECHO)	PA8
+Buzzer	PA7
+⚙️ Software Configuration
+IDE: STM32CubeIDE
+Language: C (HAL Drivers)
+Timing: DWT-based microsecond delay
+Measurement: Time-of-flight calculation
+📊 Output Behavior
+Distance Range	Buzzer Behavior
+< 5 cm	Continuous ON
+5 – 20 cm	Fast beeping
+20 – 30 cm	Slow beeping
+> 30 cm	OFF
+🚀 How It Works
+STM32 sends a trigger pulse to ultrasonic sensor
+Sensor emits ultrasonic waves
+Echo signal returns after hitting obstacle
+STM32 measures echo duration using precise timing
+Distance is calculated using sound velocity
+Buzzer alert is generated based on distance range
+▶️ How to Run
+Open project in STM32CubeIDE
+Build the project
+Connect STM32 via ST-Link/USB
+Flash the code
+Place an object in front of the sensor
+Observe buzzer alert changes with distance
+⚠️ Notes
+Ensure proper power supply to ultrasonic sensor
+Avoid soft surfaces (may absorb sound waves)
+Maintain correct sensor alignment
+DWT must be enabled for accurate timing
+Valid measurement range: 2 cm to 400 cm
+📁 Project Structure
+Core/
+ ├── Src/
+ │    └── main.c
+ ├── Inc/
+Drivers/
+project.ioc
+🧠 Concepts Demonstrated
+Ultrasonic sensor interfacing
+Time-of-flight measurement
+Real-time embedded control
+GPIO-based actuation
+Signal timing using DWT
+🌍 Applications
+Car parking assistance systems
+Robotics obstacle detection
+Industrial safety systems
+Smart automation systems
+🎯 Conclusion
+
+This project demonstrates a practical embedded safety system that uses sensor data to provide real-time feedback. It is an efficient, low-cost solution for short-range obstacle detection and forms the foundation for advanced driver assistance systems.

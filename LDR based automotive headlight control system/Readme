@@ -1,0 +1,72 @@
+Automatic Headlight Control using STM32 (LDR + LED)
+📌 Overview
+
+This project implements an Automatic Headlight Control System using an STM32 microcontroller and an LDR (Light Dependent Resistor). The system detects ambient light intensity and automatically switches an LED (representing a vehicle headlight) ON or OFF based on a predefined threshold value.
+
+🎯 Features
+Real-time ambient light detection
+ADC-based LDR signal processing
+Automatic ON/OFF LED control
+Simple and efficient embedded system
+Low-cost implementation
+🧠 Working Principle
+
+The LDR produces an analog voltage depending on light intensity. This signal is read by the STM32 using its ADC. If the environment is dark (low ADC value), the LED is turned ON. If the environment is bright (high ADC value), the LED is turned OFF.
+
+🔧 Hardware Used
+STM32 (e.g., STM32F4 series / Trainer Kit)
+LDR (Light Dependent Resistor)
+LED (Headlight simulation)
+Resistor (for voltage divider if required)
+Connecting wires
+🔌 Pin Configuration
+Component	Pin
+LDR (ADC Input)	PA0
+LED Output	PB3
+⚙️ Software Configuration
+IDE: STM32CubeIDE
+Language: C (HAL Drivers)
+ADC Resolution: 12-bit (0–4095)
+Threshold Value: 2000
+📊 Output Behavior
+Light Condition	ADC Value	LED State
+Dark	< 2000	ON
+Bright	≥ 2000	OFF
+🚀 How It Works
+STM32 reads analog value from LDR using ADC
+The ADC value is compared with threshold (2000)
+If value < 2000 → Dark → LED ON
+If value ≥ 2000 → Bright → LED OFF
+System updates continuously every 100 ms
+▶️ How to Run
+Open project in STM32CubeIDE
+Build the project
+Connect STM32 via ST-Link/USB
+Flash the code
+Vary light intensity on LDR
+Observe LED switching automatically
+⚠️ Notes
+Adjust threshold value (2000) depending on lighting conditions
+Ensure proper LDR voltage divider circuit
+Avoid noisy ADC readings (add filtering if needed)
+Keep LDR exposed to ambient light for accurate sensing
+📁 Project Structure
+Core/
+ ├── Src/
+ │    └── main.c
+ ├── Inc/
+Drivers/
+project.ioc
+🧠 Concepts Demonstrated
+ADC (Analog to Digital Conversion)
+Sensor interfacing
+Threshold-based automation
+Embedded system control
+🌍 Applications
+Automatic vehicle headlights
+Smart street lighting
+Home automation systems
+Energy-efficient lighting control
+🎯 Conclusion
+
+This project demonstrates a simple light-based automation system using STM32. It provides a practical solution for automatic lighting control and serves as a foundation for more advanced smart systems.

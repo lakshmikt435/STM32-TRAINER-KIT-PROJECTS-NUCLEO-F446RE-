@@ -1,0 +1,89 @@
+Smart Environment Monitoring System using STM32 (DHT11 + LDR + OLED)
+📌 Overview
+
+This project implements a Smart Environment Monitoring System using an STM32 microcontroller. It measures temperature, humidity, and light intensity in real time using sensors and displays the results on an OLED screen. The system processes environmental data and categorizes conditions, enabling smart automation for homes and industries.
+
+🎯 Features
+Real-time monitoring of temperature and humidity
+Ambient light detection using LDR
+OLED display for live visualization
+Multi-sensor integration
+Compact embedded system design
+🧠 Working Principle
+
+The DHT11 sensor provides digital temperature and humidity data, while the LDR outputs an analog signal proportional to light intensity. The STM32 reads LDR values using ADC and DHT11 data via GPIO. The processed information is then displayed on an OLED using I2C communication.
+
+🔧 Hardware Used
+STM32 (e.g., STM32F4 series / Trainer Kit)
+DHT11 Temperature & Humidity Sensor
+LDR (Light Dependent Resistor)
+SSD1306 OLED Display (I2C)
+Connecting wires
+🔌 Pin Configuration
+Component	Pin
+DHT11 Data	PA9
+LDR (ADC Input)	PA0
+I2C SCL	PB8
+I2C SDA	PB9
+⚙️ Software Configuration
+IDE: STM32CubeIDE
+Language: C (HAL Drivers)
+ADC Resolution: 12-bit
+Communication:
+DHT11 → Single-wire protocol
+OLED → I2C (SSD1306)
+Timing: DWT-based microsecond delay
+📊 Output
+
+OLED displays:
+
+TEMP  28C
+HUM   65%
+LIGHT BRIGHT
+
+or
+
+TEMP  25C
+HUM   70%
+LIGHT DARK
+🚀 How It Works
+ADC reads analog value from LDR
+Light condition classified as DARK or BRIGHT
+DHT11 sends temperature and humidity data
+STM32 processes all sensor values
+Data is formatted into readable strings
+OLED displays updated information every second
+▶️ How to Run
+Open project in STM32CubeIDE
+Build the project
+Connect STM32 via ST-Link/USB
+Flash the code
+Observe real-time environmental data on OLED
+⚠️ Notes
+Use pull-up resistor (4.7k–10kΩ) for DHT11
+Ensure correct OLED I2C address (0x3C or 0x78)
+Adjust LDR threshold (ldr < 2000) based on environment
+DWT must be enabled for accurate timing
+Avoid noise in analog readings (use filtering if needed)
+📁 Project Structure
+Core/
+ ├── Src/
+ │    └── main.c
+ ├── Inc/
+Drivers/
+project.ioc
+🧠 Concepts Demonstrated
+Multi-sensor interfacing
+ADC (Analog to Digital Conversion)
+Digital communication (DHT11 protocol)
+I2C communication (OLED display)
+Real-time embedded system design
+🌍 Applications
+Smart home automation
+Weather monitoring stations
+Industrial environment monitoring
+Energy-efficient systems
+IoT-based sensing systems
+🎯 Conclusion
+
+This project demonstrates a multi-sensor embedded monitoring system that provides real-time environmental data. It serves as a foundation for advanced smart automation and IoT-based monitoring solutions.
